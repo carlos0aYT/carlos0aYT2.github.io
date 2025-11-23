@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mis 100 Días</title>
+
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/a6/75/d7/a675d778dc1a2e565bb293038ee03a11.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #titulo_mensaje {
+            position: absolute;
+            top: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        #boton_esquivo {
+            position: absolute;
+            padding: 15px 30px;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            border: none;
+            transition: all .2s;
+        }
+
+        /* ✅ RESPONSIVE PARA CELULAR */
+        @media (max-width: 500px) {
+            #titulo_mensaje {
+                font-size: 28px;
+                top: 10px;
+            }
+
+            #boton_esquivo {
+                padding: 12px 20px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="titulo_mensaje">Feliz 100 Días ❤️</div>
+
+    <button id="boton_esquivo" onclick="al_hacer_clic()">
+        ¡Presiona Aquí!
+    </button>
+
+    <script>
+        const boton = document.getElementById('boton_esquivo');
+
+        let contador_clics = 0;
+        const clics_necesarios = 10;
+
+        function mover_y_cambiar_boton() {
+            const x = Math.random() * (window.innerWidth - boton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - boton.offsetHeight);
+            boton.style.left = x + 'px';
+            boton.style.top = y + 'px';
+        }
+
+        function al_hacer_clic() {
+            contador_clics++;
+
+            if (contador_clics < clics_necesarios) {
+                mover_y_cambiar_boton();
+            } else {
+                /* ✅ REDIRECCIÓN DIRECTA */
+                window.location.href = "index2.html";
+            }
+        }
+
+        window.onload = mover_y_cambiar_boton;
+        window.onresize = () => {
+            if (contador_clics < clics_necesarios) mover_y_cambiar_boton();
+        };
+    </script>
+
+</body>
+</html>
