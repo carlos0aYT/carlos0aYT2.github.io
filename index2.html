@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Te Amo ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.pinimg.com/originals/1a/39/44/1a39441fa75ea9f4334664a2a64376c9.gif');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Mochiy Pop P One', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .message-panel {
+            width: 300px;
+            height: 300px;
+            background: #fff0f3;
+            border-radius: 15px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: inset 100px 20px 100px rgba(0,0,0,0.22), 30px 0 50px rgba(0,0,0,0.15);
+            padding: 15px;
+        }
+
+        .message-panel img {
+            width: 150px;
+            border-radius: 12px;
+            margin-top: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .message-panel p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #b02727;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .message-panel button {
+            display: inline-block;
+            padding: 10px 18px;
+            background-color: #d04e4e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            margin-top: 8px;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background: #fff0f3;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .close-btn {
+            display: block;
+            margin: 15px auto 0;
+            background: #d04e4e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            width: fit-content;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .heart {
+            cursor: pointer !important;
+            position: relative;
+            z-index: 10;
+        }
+
+        .open {
+            z-index: 5;
+        }
+
+        .text-one:before, .text-one:after {
+            content: "";
+        }
+
+        @media (max-width: 600px) {
+            .wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- ✅ CARTA INICIA CERRADA -->
+        <div class="valentines-day-card">
+            <input id="open" type="checkbox">
+            <label class="open" for="open"></label>
+
+            <div class="card-front">
+                <div class="note">Click para Abrir</div>
+            </div>
+
+            <div class="card-inside">
+                <div class="text-one">Te amo mucho</div>
+                <div class="heart"></div>
+                <div class="smile"></div>
+                <div class="eyes"></div>
+            </div>
+        </div>
+
+        <div class="message-panel" id="panel">
+            <a href="https://www.youtube.com/watch?v=lWtBV1OYLZU" target="_blank">
+                <img src="https://i.scdn.co/image/ab67616d0000b2738c5d0e3697c5c9191cc8c1bf" alt="Canción">
+            </a>
+
+            <p>Te dedico esta canción ❤️</p>
+
+            <button id="openLetterBtn">
+                Dale click aquí para leer la carta
+            </button>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+    Ola linda, te quiero mucho. No sé si sepas, pero hoy se cumplen 100 días de conocer a la persona más especial e importante para mí. Quiero que sepas que te amo como no tienes idea, y el hecho de que ya sepas que me gustas no significa que yo no vaya a querer seguir conquistándote cada día. Me hace muy feliz tenerte junto a mí; eres una estrella que siempre ilumina mi corazón.
+    <br><br>
+    Te amo mucho, Desire. Jamás pensé que nos llegaríamos a topar y, de la nada, un día pasó, y mira dónde estamos ahora. A veces pienso en cuando te veía en el expreso y trato de imaginar cómo mrd yo te gusté JAJAJA. Nunca pensé que nos trataríamos así como ahora; me haces muy feliz, de verdad. Ya lo dije, pero no me importa; espero yo también hacerlo.
+    <br><br>
+    Todos mis días mejoraron gracias a ti, mi niña de ojos preciosos. Quiero que sepas que siempre voy a amarte y jamás miraré a nadie más, nunca jamás, porque solo me interesas tú. Siempre voy a respetarte y jamás te trataré mal. No quiero usarte, no quiero engañarte; espero nunca pienses eso. Solo quiero amarte y mostrarte que te mereces mucho. Yo me esforzaré por darte todo lo que te mereces.
+    <br><br>
+    Eres inteligente y única; tienes una personalidad increíble y me haces reír con las 999 payasadas que haces. Eres una chica muy buena; también eres muy hermosa, siempre te lo he dicho, y siempre que te veo, así sea un mechón de pelo, yo estoy feliz. Quiero que seas tú de verdad; no quiero a nadie más. Tú tienes todo lo que quiero y más; eres irreal, como si estuviera en un sueño.
+    <br><br>
+    Te amo, mi niña hermosa; espero siempre estar a tu lado. Ya son 100 días, ahora falta toda la vida ❤️
+    <br><br>
+    <!-- ✅ PÁRRAFO QUE FALTABA -->
+    Quiero viajar junto a ti cuando ya sea millo, viajar por todo el mundo. Sé que nunca te he dicho esto que te voy a decir porque eso está lejisiisisísimo aún, pero también quiero tener una familia contigo obviamente no ahora, y no es como algo que me importe ahora quiero primero tener todo para los dos y, como te digo, viajar por todo el mundo contigo. Ya tipo a los 30 o más, ahí sí. Pero bueno, te quiero para toda la vida y más allá también TT. No me veo con otra persona que no seas tú. Quiero casarme contigo y ser muy feliz de saber que escogí a la chica correcta con la que voy a pasar el resto de mi vida.
+    <br><br>
+    (Psdt: me caen mal todos tus amigos tontos, babosos; les voy a caer a cocacho a cada uno).
+    <br><br>
+
+    <div class="close-btn" id="closeModal">Cerrar</div>
+</div>
+
+    <script>
+        const checkbox = document.getElementById('open');
+        const panel = document.getElementById('panel');
+        const labelOpen = document.querySelector('.open');
+
+        const openLetterBtn = document.getElementById('openLetterBtn');
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('closeModal');
+
+        // ✅ Forzar carta cerrada SIEMPRE
+        window.onload = () => {
+            checkbox.checked = false;
+        };
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                labelOpen.style.display = 'none';
+                panel.style.display = 'flex';
+            }
+        });
+
+        openLetterBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
